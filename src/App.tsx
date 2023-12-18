@@ -3,6 +3,8 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DashboardPage, Login, Users } from "./Pages";
+import { persistQueryClient } from "@tanstack/react-query-persist-client";
+import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import UserTable from "./Pages/UserTable/UserTable";
@@ -10,16 +12,20 @@ import UserTable from "./Pages/UserTable/UserTable";
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      //  queryKey: ["users"],
-      retry: false,
-      refetchOnWindowFocus: false,
+      cacheTime: 1000 * 60 * 60 * 24, // 24 hours
     },
   },
 });
 
-function App() {
-  // const [count, setCount] = useState(0);
+const localStoragePersister = createSyncStoragePersister({
+  storage: window.localStorage,
+});
 
+persistQueryClient({
+  persister: localStoragePersister,
+  queryClient: queryClient,
+});
+function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>

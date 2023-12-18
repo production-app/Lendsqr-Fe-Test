@@ -98,6 +98,8 @@ const Users: React.FC = () => {
 
   const navigate = useNavigate();
 
+  console.log(orgName, userName, email, date, status, phoneNumber);
+
   const { isLoading, refetch } = useQuery(["users"], () => getUsers(), {
     onSuccess: ({ data }) => {
       console.log("data", data);
@@ -294,7 +296,7 @@ const Users: React.FC = () => {
                 options={getStatusOptions()}
                 onChange={(e) => setStatus(e.target.value)}
                 placeholder="Select"
-                disabled
+                //disabled
               />
             </div>
             <div className="filter-popup-btns">
