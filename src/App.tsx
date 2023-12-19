@@ -3,7 +3,10 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DashboardPage, Login, Users } from "./Pages";
-import { persistQueryClient } from "@tanstack/react-query-persist-client";
+import {
+  persistQueryClient,
+  PersistQueryClientProvider,
+} from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -17,18 +20,21 @@ export const queryClient = new QueryClient({
   },
 });
 
-const localStoragePersister = createSyncStoragePersister({
+// const localStoragePersister = createSyncStoragePersister({
+//   storage: window.localStorage,
+// });
+
+const persister = createSyncStoragePersister({
   storage: window.localStorage,
 });
 
-persistQueryClient({
-  persister: localStoragePersister,
-  queryClient: queryClient,
-});
 function App() {
   return (
     <>
-      <QueryClientProvider client={queryClient}>
+      <PersistQueryClientProvider
+        client={queryClient}
+        persistOptions={{ persister }}
+      >
         <Router>
           <Routes>
             <Route path="/" element={<DashboardPage />} />
@@ -37,7 +43,7 @@ function App() {
             <Route path="/login" element={<Login />} />
           </Routes>
         </Router>
-      </QueryClientProvider>
+      </PersistQueryClientProvider>
     </>
   );
 }
