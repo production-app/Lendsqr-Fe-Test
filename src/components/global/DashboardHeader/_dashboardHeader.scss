@@ -147,7 +147,7 @@
         height: 3rem;
         border-radius: 100%;
         border: 3px solid transparent;
-        background: linear-gradient(45deg, #1aacea, #213f7d) border-box;
+        background: linear-gradient(45deg, #ea1a1af1, #11bbe6) border-box;
         mask-composite: exclude;
 
         img {
@@ -160,7 +160,6 @@
 
         &:hover {
           // animation: shake 1s ease;
-          // animation: pulse 1.5s infinite;
         }
       }
 
@@ -195,22 +194,17 @@
 }
 
 @keyframes rotate {
-  100% {
-    transform: rotate(1turn);
+  from {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
   }
 }
 
-@keyframes pulse {
-  0% {
-    border-color: #3498db;
-    box-shadow: 0 0 10px #3498db;
-  }
-  50% {
-    border-color: #2980b9;
-    box-shadow: 0 0 20px #2980b9;
-  }
+@keyframes spin {
   100% {
-    border-color: #3498db;
-    box-shadow: 0 0 10px #3498db;
+    transform: rotateZ(360deg);
   }
 }

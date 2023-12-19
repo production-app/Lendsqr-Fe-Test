@@ -34,7 +34,7 @@ const SidebarNav: React.FC<SidenavProps> = ({ show }) => {
         <Link
           className={classnames("sidenav-link", { active: activeItem === "/" })}
           to="/"
-          onClick={() => setActiveItem("/")}
+          onClick={() => setActiveItem("/dashboard")}
         >
           <Home />
           <span>Dashboard</span>

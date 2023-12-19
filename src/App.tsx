@@ -34,10 +34,10 @@ function App() {
       >
         <Router>
           <Routes>
-            <Route path="/" element={<DashboardPage />} />
+            <Route path="/" element={<Login />} />
             <Route path="/customers/users" element={<Users />} />
             <Route path="/customers/users/:userId" element={<UserTable />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
           </Routes>
         </Router>
       </PersistQueryClientProvider>

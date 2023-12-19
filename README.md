@@ -1,10 +1,10 @@
 # Lendsqr
 
-This is an application that powers lenders to build, launch, and scale their digital lending business across multiple channels, at the lowest cost. Built eith React.js, Typescript, React Context API and SASS.
+This is an application that powers lenders to build, launch, and scale their digital lending business across multiple channels, at the lowest cost. Built on React.js, Typescript, React Hooks, Tanstack React Query and SASS.
 
 ## Demo Link
 
-<!-- Access the web application at: [Lendsqr](https://lendsqr-assessment-chidera-ezenwekwe.vercel.app) -->
+Access the web application at: [Lendsqr](https://adebayo-abiodun-lendsqr-fe-test-production-app.vercel.app/login)
 
 ## Screenshots
 

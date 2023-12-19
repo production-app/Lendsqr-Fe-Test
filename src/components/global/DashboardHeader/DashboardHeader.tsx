@@ -68,7 +68,7 @@ const DashboardHeader: React.FC<{ menuClick: () => void }> = ({
               variant="naked"
               className="popup-btn"
               style={{ display: "flex", alignItems: "center" }}
-              onClick={() => navigate("/login")}
+              onClick={() => navigate("/")}
             >
               <UserCancel />
               <span style={{ marginLeft: "0.1rem" }}>Back to login</span>
