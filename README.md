@@ -6,12 +6,18 @@ LendSqr is an innovative company that helps lenders **digitize** their lending o
 
 Tools used in building the web application:
 
-- React.js Framework
-- Vite Frontend Tool
-- TypeScript Template
-- SASS Preprocessor
+- React.js Framework  ![rect](https://github.com/production-app/Lendsqr-Fe-Test/assets/52615278/0fb9b1b9-96b5-4d27-ac19-2ecd0fb1b5b0)
+
+- Vite Frontend Tool ![vite-logo-BFD4283991-seeklogo com](https://github.com/production-app/Lendsqr-Fe-Test/assets/52615278/a8434b23-96b5-4934-938d-14363fa411a4)
+  
+- TypeScript Template  ![Typescript_logo_2020 svg](https://github.com/production-app/Lendsqr-Fe-Test/assets/52615278/a736f092-104f-41b7-a841-8d7449c4cad0)
+
+- SASS Preprocessor ![sass](https://github.com/production-app/Lendsqr-Fe-Test/assets/52615278/e5701d64-36d8-4efc-9c38-09f75e34f8f6)
+
 - Axios Library
-- Tanstack React Query
+  
+- Tanstack React Query   ![react_query](https://github.com/production-app/Lendsqr-Fe-Test/assets/52615278/1dab1c43-171e-43dd-ac21-ab5d7735e5d6)
+ 
 - LocalStorage
 
 ## Reflection and Approach
@@ -32,6 +38,7 @@ The Project Employs Practices Like:
 - Use a Linter.
 - Employ Snippet Libraries.
 - Uses Scss.
+- Asynchronous State Management
 
 ## Demo Link
  Access the web application at [Lendsqr](https://adebayo-abiodun-lendsqr-fe-test-production-app.vercel.app/login) 
