@@ -3,13 +3,10 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DashboardPage, Login, Users } from "./Pages";
-import {
-  persistQueryClient,
-  PersistQueryClientProvider,
-} from "@tanstack/react-query-persist-client";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient } from "@tanstack/react-query";
 import UserTable from "./Pages/UserTable/UserTable";
 
 export const queryClient = new QueryClient({
